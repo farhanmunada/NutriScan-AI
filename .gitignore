@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Temporary Research Folders
+temp_model/
+temp_dataset/
+
+# Large Files (Zips)
+*.zip
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Vite
+.vite/

@@ -7,6 +7,7 @@ dist-ssr/
 # Temporary Research Folders
 temp_model/
 temp_dataset/
+frontend/
 
 # Large Files (Zips)
 *.zip

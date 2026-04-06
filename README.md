@@ -34,16 +34,12 @@ NutriScan AI adalah aplikasi web cerdas yang memungkinkan pengguna untuk mendete
 3.  Jalankan server FastAPI dan tunnel LocalTunnel untuk mendapatkan URL publik.
 
 ### 2. Persiapan Frontend
-1.  Masuk ke direktori frontend:
-    ```bash
-    cd frontend
-    ```
-2.  Instal dependensi:
+1.  Pastikan Anda berada di direktori akar:
     ```bash
     npm install
     ```
-3.  Buka file `src/App.jsx` dan ganti `API_BASE_URL` dengan URL LocalTunnel Anda.
-4.  Jalankan aplikasi:
+2.  Buka file `src/App.jsx` dan ganti `API_BASE_URL` dengan URL LocalTunnel Anda.
+3.  Jalankan aplikasi:
     ```bash
     npm run dev
     ```

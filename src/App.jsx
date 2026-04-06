@@ -42,7 +42,21 @@ function App() {
     try {
       const response = await axios.post(`${API_BASE_URL}/detect`, formData);
       
-      const detectedItems = response.data.items.map(item => ({
+      // Filter hasil deteksi: ambil yang > 40% dan unik berdasarkan nama (ambil skor tertinggi)
+      const filteredItems = response.data.items
+        .filter(item => item.confidence > 0.4)
+        .reduce((acc, current) => {
+          const x = acc.find(item => item.name === current.name);
+          if (!x) {
+            return acc.concat([current]);
+          } else if (current.confidence > x.confidence) {
+            return acc.map(item => item.name === current.name ? current : item);
+          } else {
+            return acc;
+          }
+        }, []);
+
+      const detectedItems = filteredItems.map(item => ({
         ...item,
         gram: 100
       }));

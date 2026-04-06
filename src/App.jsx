@@ -142,7 +142,6 @@ function App() {
             id="fileInput"
             type="file"
             accept="image/*"
-            capture="environment"
             onChange={handleImageChange}
             style={{ display: 'none' }}
           />
